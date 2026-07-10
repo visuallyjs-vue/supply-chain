@@ -1,11 +1,19 @@
 <script setup>
-import { Node, Edge } from "@visuallyjs/browser-ui";
+import { Node, Edge, isNode, isPort } from "@visuallyjs/browser-ui";
 import { InspectorComponent } from "@visuallyjs/browser-ui-vue";
+import {ref} from "vue";
+
+const current = ref(null)
+
+const refresh = (obj) => {
+  current.value = obj
+}
+
+
 </script>
 
 <template>
-  <InspectorComponent class="vjs-supply-chain-inspector">
-    <template #default="current">
+  <InspectorComponent class="vjs-supply-chain-inspector"  :refresh="refresh">
       <div v-if="current?.objectType === Node.objectType">
         <label>Name:</label>
         <input type="text" vjs-att="name" placeholder="name" />
@@ -30,6 +38,5 @@ import { InspectorComponent } from "@visuallyjs/browser-ui-vue";
           <option value="Emirates">Emirates</option>
         </select>
       </div>
-    </template>
   </InspectorComponent>
 </template>
