@@ -1,7 +1,7 @@
 {
   "name": "visuallyjs-vue-supply-chain",
   "private": true,
-  "version": "1.2.2",
+  "version": "1.2.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@visuallyjs/browser-ui-vue": "^1.2.2",
+    "@visuallyjs/browser-ui-vue": "^1.2.3",
     "vue": "^3.5.32"
   },
   "devDependencies": {
